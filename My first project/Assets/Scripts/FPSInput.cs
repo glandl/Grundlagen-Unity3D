@@ -27,6 +27,7 @@ public class FPSInput : MonoBehaviour
 
         // transform movement form local to global system
         movement = transform.TransformDirection(movement);
+        movement = new Vector3(movement.x, 0, movement.z);
         
         characterController.Move(movement);
         
